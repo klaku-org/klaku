@@ -1,0 +1,16 @@
+:root {
+  --brand: #b4f0be; /* light pastel green */
+  --display: 'Fredoka', system-ui, sans-serif; /* titles */
+  --body: 'Comic Neue', system-ui, sans-serif;  /* everything else */
+}
+* { box-sizing: border-box; }
+html, body, #app { margin: 0; height: 100%; overflow: hidden; }
+body {
+  background: #000000;
+  color: #fff;
+  font-family: var(--body);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
