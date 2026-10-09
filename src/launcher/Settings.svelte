@@ -14,8 +14,9 @@
 <div class="settings">
   <h1>Staff settings</h1>
 
+  <label class="check"><input type="checkbox" bind:checked={$settings.autoScan} /> Auto-scan</label>
   <label>Scan speed: {($settings.scanMs / 1000).toFixed(1)}s
-    <input type="range" min="1000" max="8000" step="250" bind:value={$settings.scanMs} />
+    <input type="range" min="1000" max="8000" step="250" bind:value={$settings.scanMs} disabled={!$settings.autoScan} />
   </label>
   <label>Ignore repeat presses within: {$settings.debounceMs}ms
     <input type="range" min="0" max="2000" step="50" bind:value={$settings.debounceMs} />

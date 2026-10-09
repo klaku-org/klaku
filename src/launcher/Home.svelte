@@ -21,6 +21,7 @@
   // Auto-scan: re-arms on every move, so a manual step gets a full scan period.
   $effect(() => {
     index
+    if (!$settings.autoScan) return
     const id = setTimeout(() => step(1), $settings.scanMs)
     return () => clearTimeout(id)
   })

@@ -1,6 +1,7 @@
 import { writable, get } from 'svelte/store'
 
 export interface Settings {
+  autoScan: boolean    // move the highlight on a timer
   scanMs: number       // time each tile stays highlighted
   debounceMs: number   // ignore presses closer together than this
   holdExitMs: number   // hold the switch this long to leave a game
@@ -11,6 +12,7 @@ export interface Settings {
 }
 
 const defaults: Settings = {
+  autoScan: true,
   scanMs: 2500,
   debounceMs: 300,
   holdExitMs: 5000,
