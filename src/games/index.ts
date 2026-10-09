@@ -14,7 +14,7 @@ export const games: GameInfo[] = [
     id: 'game2',
     name: 'Game 2',
     icon: game2Icon,
-    color: '#3b82f6',
+    color: '#22c55e',
     load: () => import('./game2').then((m) => m.default),
   },
 ]
