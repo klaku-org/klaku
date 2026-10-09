@@ -1,8 +1,9 @@
 import type { GameInfo } from '../core/game'
 import placeholderIcon from './placeholder/icon.svg'
-import game2Icon from './game2/icon.svg'
+import lilypadIcon from './lilypad/icon.svg'
 
-export const games: GameInfo[] = [
+/** Only in `npm run dev`; left out of production builds. */
+const devGames: GameInfo[] = [
   {
     id: 'placeholder',
     name: 'Placeholder',
@@ -10,11 +11,15 @@ export const games: GameInfo[] = [
     color: '#facc15',
     load: () => import('./placeholder').then((m) => m.default),
   },
+]
+
+export const games: GameInfo[] = [
   {
-    id: 'game2',
-    name: 'Game 2',
-    icon: game2Icon,
+    id: 'lilypad',
+    name: 'Lilypad',
+    icon: lilypadIcon,
     color: '#22c55e',
-    load: () => import('./game2').then((m) => m.default),
+    load: () => import('./lilypad').then((m) => m.default),
   },
+  ...(import.meta.env.DEV ? devGames : []),
 ]

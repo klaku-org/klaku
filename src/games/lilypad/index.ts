@@ -48,7 +48,7 @@ function drawPad(scene: Phaser.Scene) {
   return scene.add.container(0, 0, [g, ...petals, scene.add.circle(fx, fy, 13, FLOWER_CENTRE)])
 }
 
-const game2: GameModule = {
+const lilypad: GameModule = {
   start(container, ctx) {
     const still = ctx.settings.reducedMotion
 
@@ -178,4 +178,4 @@ const game2: GameModule = {
   },
 }
 
-export default game2
+export default lilypad
