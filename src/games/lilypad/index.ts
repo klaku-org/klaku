@@ -165,7 +165,7 @@ const lilypad: GameModule = {
     game = new Phaser.Game({
       type: Phaser.AUTO,
       parent: container,
-      backgroundColor: '#000000',
+      backgroundColor: '#06152b', // dark navy pond
       scale: { mode: Phaser.Scale.RESIZE },
       scene: Main,
     })
